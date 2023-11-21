@@ -1,0 +1,286 @@
+.corpus-form {
+	display: none;
+}
+.corpus-form.show {
+	display: block;
+}
+.btn.current-page {
+	background-color: #6c757d;
+	color: #fff;
+}
+.corpus-pagination-container {
+	display: flex;
+	justify-content: center;
+}
+.form-check:has(input.form-check-input.on) {
+	background: white;
+	color: var(--e-global-color-f35dc1c);
+	border-color: var(--e-global-color-f35dc1c);
+}
+/* ---custom_검색창--- */
+/* (form_header_lnb) */
+.corpus .corpus-form-radio{
+	margin: 0 !important;
+	display: flex;
+	align-items: center;
+	/* gap: 20px; */
+	height: 65px;
+	color: #aaa;
+	margin-bottom: 40px !important;
+}
+.corpus .corpus-form-radio .form-check{
+	margin: 0;
+	padding: 0;
+	width: 50%;
+	height: 100%;
+	/* border-radius: 10px; */
+	/* box-shadow: 1px 1px 12px 0px rgb(0, 0, 0 , .08); */
+	background: #f7f7f7;
+	border: 1px solid #f7f7f7;
+	border-bottom: none;
+}
+.corpus .corpus-form-radio .form-check-input[type=radio]{
+	display: none;
+}
+.corpus .corpus-form-radio .form-check-label{
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 18px;
+	font-weight: 700;
+}
+/* (form_header_lnb end) */
+/* (content) */
+.corpus form{
+	text-align:center;
+}
+.corpus .accordion{
+	display:flex;
+	flex-direction:column;
+	gap:20px;
+	margin-bottom:30px;
+}
+/* ---title--- */
+.corpus [type=button]:not(:disabled){
+	font-size:18px;
+	color:black;
+	font-weight:700;
+	background: white;
+	padding: 30px;
+	border: 1px solid #ececec;
+	border-radius: 10px;
+}
+.corpus .accordion-button:not(.collapsed), .corpus button:focus{
+	background:transparent;
+	box-shadow:none;
+	border: none;
+	border-radius: 10px;
+	padding-bottom: 15px;
+}
+.corpus [type=button]:hover:has(.accordion-collapse.collapse.show){
+	background: rgb(220, 39, 21 , .05) !important;
+}
+.corpus .accordion-item{
+	border:none;
+}
+.corpus .characteristic .accordion-item{
+	background: #f7f7f7;
+	border-radius: 10px;
+}
+.corpus .characteristic .accordion-item:hover:has(.accordion-collapse.collapse.show){
+	background: rgb(220, 39, 21 , .05);
+}
+.form-check-input:focus{
+	box-shadow:none;
+}
+.corpus .accordion-button::after{
+	background:url('/wp-content/uploads/2023/05/prev_icon2.svg') !important;
+	transform:rotate(-90deg);
+	filter:brightness(0);
+}
+.corpus .accordion-button:not(.collapsed)::after{
+	transform:rotate(90deg);
+}
+/* ---title end--- */
+/* ---radio btn--- */
+.corpus .corpus-form .accordion-body .form-check{
+	margin: 0;
+	display: flex;
+	align-items: center;
+	gap: 7px;
+}
+.corpus .accordion-body.corpus-type-radio, .corpus .accordion-body.checkbox-word-class{
+	display:grid;
+	grid-template-columns:repeat(4, 1fr);
+	text-align:left;
+	justify-items: start;
+}
+.corpus .accordion-body.checkbox-word-class{
+	grid-template-columns:repeat(7, 1fr);
+}
+.corpus .form-check-input:checked{
+	border-color: var(--e-global-color-f35dc1c);
+	background-color: var(--e-global-color-f35dc1c);
+}
+.corpus .form-check-input{
+	cursor: pointer;
+	position: relative;
+	bottom: 3px;
+}
+.corpus .form-check-label{
+	font-size:18px;
+	cursor: pointer;
+}
+/* ---radio btn end--- */
+/* ---text input--- */
+.corpus .accordion-body{
+	display:flex;
+	column-gap:20px;
+	row-gap:10px;
+	padding: 0 30px 30px;
+	opacity: 0;
+}
+.corpus .accordion-collapse.collapse.show .accordion-body{
+	opacity: 1;
+}
+.corpus .accordion-body .form-floating{
+	width:100%;
+	margin:0 !important;
+}
+.corpus .accordion-body.exclusion-value{
+	flex-wrap:wrap;
+}
+.corpus .accordion-body.exclusion-value .form-floating:not(.corpus .accordion-body.exclusion-value .form-floating:first-child){
+	width:calc(50% - 10px);
+}
+.corpus input{
+	border-color:#ececec;
+}
+.corpus input:focus{
+	border-color: #aaa;
+}
+.corpus .form-floating>label{
+	font-size:18px;
+	display: flex;
+	align-items: center;
+	color:#aaa;
+}
+.form-control:focus{
+	box-shadow:none;
+}
+/* --text input end--- */
+/* ---submit btn--- */
+.corpus button[type=submit]{
+	padding:12px 24px;
+	background:var(--e-global-color-f35dc1c);
+	border:none;
+	border-radius:3px;
+	font-size:14px;
+	color: white;
+	display: flex;
+	align-items:center;
+	margin: 0 auto;
+	gap: 5px;
+}
+.corpus button[type=submit]::before{
+	content:"\f002";
+	font-family:"Font Awesome 5 Free";
+}
+/* ---submit btn end--- */
+/* (content end) */
+/* (단어검색 content) */
+/* ---search--- */
+.corpus .corpus-form.word .input-group{
+	margin-bottom: 20px !important;
+	height: 70px;
+}
+.corpus .corpus-form.word .input-group input{
+	padding: .5rem 2rem;
+}
+/* ---search end--- */
+/* ---accordion--- */
+.corpus .corpus-form.word .accordion-header{
+	display: none;
+}
+.corpus .corpus-form.word .accordion-body{
+	padding: 0;
+}
+.corpus .corpus-form.word .accordion-body .checkbox-same-position{
+	display: flex;
+	gap: 30px;
+}
+.corpus .corpus-form.word .form-check-label{
+	font-size: 16px;
+}
+/* ---accorddion end--- */
+/* (단어검색 content end) */
+@media screen and (max-width:767px){
+	/* (form_header_lnb) */
+	.corpus .corpus-form-radio{
+		height: 45px;
+	}
+	/* (form_header_lnb end) */
+	/* (content) */
+	/* ---title--- */
+	.corpus [type=button]:not(:disabled){
+		padding: 20px;
+	}
+	/* ---title end--- */
+	/* ---radio btn--- */
+	.corpus .accordion-body.corpus-type-radio{
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.corpus .accordion-body.checkbox-word-class{
+		grid-template-columns: repeat(3, 1fr);
+	}
+	/* ---radio btn end--- */
+	/* ---text input--- */
+	.corpus .accordion-body{
+		gap:10px;
+		padding: 0 20px 20px;
+	}
+	.corpus .accordion-body.exclusion-value .form-floating:not(.corpus .accordion-body.exclusion-value .form-floating:first-child){
+		width:100%;
+	}
+	/* ---text input end--- */
+	/* ---(content end)--- */
+	/* (단어검색 content) */
+	.corpus .corpus-form.word .input-group{
+		height: 55px;
+	}
+	.corpus .corpus-form.word .accordion-body .checkbox-same-position{
+		display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    row-gap: 10px;
+	}
+	/* (단어검색 content end) */
+}
+/* ---custom_검색창 css end--- */
+/* ---custom_검색결과 css--- */
+/* (page number) */
+.corpus-pagination-container{
+	gap: 10px;
+	margin: 0;
+}
+ul.corpus-pagination-container .btn{
+	margin: 0 !important;
+	padding: 0;
+	border: none;
+	font-size: 16px;
+	color: #aaa;
+}
+ul.corpus-pagination-container .btn.current-page{
+	background: none;
+	color: var(--e-global-color-f35dc1c);
+	font-weight: 700;
+}
+ul.corpus-pagination-container .btn.btn-dark{
+	background: none;
+	color: #aaa;
+}
+/* (page number end) */
+/* ---custom_검색결과 css end--- */
